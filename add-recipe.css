@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: rgb(128, 130, 131);
+    margin: 0;
+    padding: 1rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+h1 {
+    color: rgb(253, 66, 175);
+    margin-top: 0;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 1rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.field > label, label, legend {
+    font-weight: bold;
+}
+
+input:not([type="checkbox"], [type="radio"]), select, textarea, fieldset {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+fieldset {
+    border: 1px solid #bbb;
+    border-radius: 8px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #2e5597;
+    color: #2e5597;
+    outline: none;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    accent-color: #2e5597;
+}
+
+button {
+    background-color: rgb(253, 66, 175);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1rem;
+    min-height: 44px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: rgb(252, 130, 201);
+}
+
+@media (width >= 700px) {
+    form {
+        padding: 2rem;
+    }
+
+    .row {
+        flex-direction: row;
+    }
+
+    .row .field {
+        flex: 1;
+    }
+
+    button {
+        width: auto;
+        align-self: center;
+    }
+}
+
+/*
+
+שאלה א:
+ההבדל בין id ל-name: ה-id הוא מזהה ייחודי לאלמנט אחד בדף (משמש לקישור התווית label ולעיצוב), בעוד ש-name הוא שם המשתנה שנשלח לשרת יחד עם הערך. לכל כפתורי הרדיו יש אותו name כדי שהדפדפן ידע שהם שייכים לאותה קבוצה ויאפשר לבחור רק אפשרות אחת מתוכם.
+
+שאלה ב:
+כותבים קודם את העיצוב למסך הקטן (Mobile First) כדי להבטיח תצוגה תקינה ומהירה במובייל כברירת מחדל, ומוסיפים שדרוגים למסכים גדולים יותר. אם היינו כותבות את ה-Media Query לפני הכללים הרגילים, הכללים הרגילים שבאים אחריו בקובץ היו דורסים אותו (בגלל סדר הקריאה של ה-CSS) והעיצוב למסך רחב לא היה פועל.
+
+שאלה ג:
+אחרי הלחיצה על שליחה, נוספו לכתובת הדף (URL) סימן שאלה (?) ואחריו זוגות של שם השדה והערך שהוזן בו (לדוגמה: ?title=...&kind=meat). זה מלמד שהתכונה name היא המפתח שלפיו הנתונים מזוהים ונשלחים בשיטת GET.
+*/
