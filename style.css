@@ -1,0 +1,80 @@
+
+        body{
+           color: gray;
+
+        }
+        h2{
+            color: burlywood;
+        }
+        #recipe-title{
+            font-size: 40px;
+            color: maroon;
+        }
+        .highlight{
+           background-color: peru;
+        }
+        .intro {
+            font-size: 20px;
+        }
+        .block{
+            background-color: white;
+            width: 700px;
+             box-shadow: 0 2px 8px gray;
+        }
+        #main-image{
+            width: 400px;
+              box-shadow: 0 10px 3px gray;
+        }
+        #info-table{
+            width: 100%;
+        }
+        .side-image{
+            width: 200px;
+            height: 200px;
+    
+        }
+        #nav a:hover{
+            color: darkred;
+
+        
+        }
+         .block:hover
+        {
+          box-shadow: 2px 5px 20px gray;
+
+        }
+        .ingredients-list li:first-child{
+            color: brown;
+        }
+        .steps-list li:last-child{
+            color:chocolate;
+        
+        }
+        tbody tr:hover{
+            background-color: rgb(247, 169, 144);
+        }
+       .ingredients-list li::before{
+        content: "V";
+        color: green;
+       }
+       h2::after{
+        content: ":";
+        color:darkgoldenrod;
+       }
+
+       #page-footer p::before{
+        content: "©";
+       }
+       .container{
+        width: 900px;
+       }
+       /*
+       : תשובה א- במצב כזה עדיף סלקטור אחד של class אין צורך לכתוב 5 פעמים את אותו הדבר
+       : תשובה ב-התמונה התעוותה מכיוון שהגבלנו לה גם את הרוחב וגם את הגובה והיא מלבנית, הייתי כותבת גובה ורוחב באופן יחסי לתמונה
+       */
+       
+             
+        
+
+
+    
